@@ -12,6 +12,11 @@
 		88164F0C2B68BDD400225589 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88164F0B2B68BDD400225589 /* Assets.xcassets */; };
 		88164F0F2B68BDD400225589 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88164F0E2B68BDD400225589 /* Preview Assets.xcassets */; };
 		88164F172B68BE5F00225589 /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88164F162B68BE5F00225589 /* WeatherData.swift */; };
+		88164F1A2B68CC6300225589 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88164F192B68CC6300225589 /* LoginView.swift */; };
+		88164F1F2B68D18200225589 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88164F1E2B68D18200225589 /* Strings.swift */; };
+		88164F212B68D1E000225589 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88164F202B68D1E000225589 /* SignupView.swift */; };
+		88164F232B68D21200225589 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88164F222B68D21200225589 /* AuthView.swift */; };
+		88164F252B68D3C600225589 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 88164F242B68D3C600225589 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +26,11 @@
 		88164F0B2B68BDD400225589 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		88164F0E2B68BDD400225589 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		88164F162B68BE5F00225589 /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
+		88164F192B68CC6300225589 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		88164F1E2B68D18200225589 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		88164F202B68D1E000225589 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
+		88164F222B68D21200225589 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
+		88164F242B68D3C600225589 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,9 +63,11 @@
 		88164F062B68BDD100225589 /* WeatherApp */ = {
 			isa = PBXGroup;
 			children = (
+				88164F242B68D3C600225589 /* GoogleService-Info.plist */,
+				88164F1B2B68D15500225589 /* Extensions */,
+				88164F182B68CC5200225589 /* Views */,
 				88164F152B68BE4900225589 /* ViewModel */,
 				88164F072B68BDD100225589 /* WeatherAppApp.swift */,
-				88164F092B68BDD100225589 /* ContentView.swift */,
 				88164F0B2B68BDD400225589 /* Assets.xcassets */,
 				88164F0D2B68BDD400225589 /* Preview Content */,
 			);
@@ -76,6 +88,25 @@
 				88164F162B68BE5F00225589 /* WeatherData.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		88164F182B68CC5200225589 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				88164F092B68BDD100225589 /* ContentView.swift */,
+				88164F192B68CC6300225589 /* LoginView.swift */,
+				88164F202B68D1E000225589 /* SignupView.swift */,
+				88164F222B68D21200225589 /* AuthView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		88164F1B2B68D15500225589 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				88164F1E2B68D18200225589 /* Strings.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +169,7 @@
 			files = (
 				88164F0F2B68BDD400225589 /* Preview Assets.xcassets in Resources */,
 				88164F0C2B68BDD400225589 /* Assets.xcassets in Resources */,
+				88164F252B68D3C600225589 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,8 +180,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88164F232B68D21200225589 /* AuthView.swift in Sources */,
+				88164F212B68D1E000225589 /* SignupView.swift in Sources */,
 				88164F0A2B68BDD100225589 /* ContentView.swift in Sources */,
 				88164F172B68BE5F00225589 /* WeatherData.swift in Sources */,
+				88164F1F2B68D18200225589 /* Strings.swift in Sources */,
+				88164F1A2B68CC6300225589 /* LoginView.swift in Sources */,
 				88164F082B68BDD100225589 /* WeatherAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
