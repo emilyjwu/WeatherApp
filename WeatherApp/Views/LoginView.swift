@@ -15,6 +15,7 @@ struct LoginView: View {
     
     @State private var email: String = ""
     @State private var password: String = ""
+    @State private var showAlert = false
     
     
     
@@ -113,6 +114,7 @@ struct LoginView: View {
                 Button {
                     Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
                         if let error = error {
+                            showAlert = true
                             print(error)
                             return
                         }
@@ -141,6 +143,12 @@ struct LoginView: View {
                         )
                         .padding(.horizontal)
                 }
+                .alert(isPresented: $showAlert) {
+                        Alert(
+                            title: Text("Incorrect Password"),
+                            message: Text("Try Again")
+                            )
+                    }
                 
                 
             }
