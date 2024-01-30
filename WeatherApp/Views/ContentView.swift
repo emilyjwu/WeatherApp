@@ -9,7 +9,6 @@ import SwiftUI
 import FirebaseAuth
 
 struct ContentView: View {
-    
     @AppStorage("uid") var userID: String = ""
     
     var body: some View {
@@ -17,7 +16,7 @@ struct ContentView: View {
         if userID == "" {
             AuthView()
         } else {
-            WeatherView()
+            WeatherView(userID: $userID)
 //            Text("Logged In! \nYour user id is \(userID)")
 //            
 //            Button(action: {
