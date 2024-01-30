@@ -13,6 +13,7 @@ import FirebaseAuth
 struct WeatherView: View {
     @StateObject private var locationManager = LocationManager()
     @State private var weatherData: WeatherData?
+    @Binding var userID: String
     
     var body: some View {
         ZStack {
@@ -36,6 +37,22 @@ struct WeatherView: View {
                 } else {
                     ProgressView()
                 }
+                
+                Button(action: {
+                    let firebaseAuth = Auth.auth()
+                    do {
+                        try firebaseAuth.signOut()
+                        withAnimation {
+                            userID = ""
+                        }
+                    } catch let signOutError as NSError {
+                        print("Error signing out: %@", signOutError)
+                    }
+                }) {
+                    Text("Sign Out")
+                        .font(.title3).bold()
+                }
+                            
             }
             .frame(width: 300, height: 300)
             .background(.ultraThinMaterial)
@@ -78,6 +95,11 @@ struct WeatherView: View {
     }
 }
 
-#Preview {
-    WeatherView()
+struct WeatherView_Previews: PreviewProvider {
+    static var previews: some View {
+        let previewBinding = Binding.constant("PreviewUserID")
+        return WeatherView(userID: previewBinding)
+    }
 }
+
+
