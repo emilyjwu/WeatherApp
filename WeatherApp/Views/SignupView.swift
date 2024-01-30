@@ -9,8 +9,8 @@ import SwiftUI
 
 import SwiftUI
 import FirebaseAuth
-
 struct SignupView: View {
+
     @State private var email: String = ""
     @State private var password: String = ""
     @AppStorage("uid") var userID: String = ""
@@ -18,8 +18,8 @@ struct SignupView: View {
     
     private func isValidPassword(_ password: String) -> Bool {
         // minimum 6 characters long
-        // 1 uppercase character
         // 1 special char
+        // 1 uppercase character
         
         let passwordRegex = NSPredicate(format: "SELF MATCHES %@", "^(?=.*[a-z])(?=.*[$@$#!%*?&])(?=.*[A-Z]).{6,}$")
         
